@@ -1,3 +1,7 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using IronOcr;
 using TSI.OCR.Common.Config;
 using Xunit;
@@ -6,14 +10,14 @@ namespace TSI.OCR.Auto.Tests;
 
 public class IronOcrSampleTest
 {
-    public const string File1 = "Group menu_RU.pdf";
-    public const string File2 = "Group menu_RU.pdf";
+    public const string File1 = "ru (1).pdf";
+    public const string File2 = "ru (1).pdf";
 
     [Obsolete("Obsolete")]
     public IronOcrSampleTest()
     {
-        //LicenseKey =
-            //"IRONOCR.KRISTINEIVANOVA.6207-3AC6322919-IXBPPJWY2AWMR-K5ACUCUZBZC5-RU4X2Y2U7QYT-6CS7HC4K56FP-RO32SOBCKJV5-KTWREB-THNFP5SEDSWJUA-DEPLOYMENT.TRIAL-5OMJXI.TRIAL.EXPIRES.07.JUN.2023";
+        Installation.LicenseKey =
+            "IRONOCR.KRISTINEIVANOVA.6207-3AC6322919-IXBPPJWY2AWMR-K5ACUCUZBZC5-RU4X2Y2U7QYT-6CS7HC4K56FP-RO32SOBCKJV5-KTWREB-THNFP5SEDSWJUA-DEPLOYMENT.TRIAL-5OMJXI.TRIAL.EXPIRES.07.JUN.2023";
     }
 
     [Theory]
@@ -23,11 +27,11 @@ public class IronOcrSampleTest
         var ocr = new IronTesseract();
         using var input = new OcrInput();
         var imgText = "";
-        if (fileName == File1) imgText = "Test";
-        if (fileName == File2) imgText = "GRANDE LARGE";
+        if (fileName == File1) imgText = "ru (1).pdf";
+        if (fileName == File2) imgText = "ru (1).pdf";
 
         var dir = Directory.GetParent(Directory.GetCurrentDirectory()).Parent?.Parent?.FullName;
-        var path = $@"{dir}\images\{fileName}";
+        var path = $@"{dir}\Resource\{fileName}";
 
         input.AddImage(path);
         var result = ocr.Read(input);
@@ -40,12 +44,12 @@ public class IronOcrSampleTest
     public void IronOcrPdfTest()
     {
         var Ocr = new IronTesseract();
-        var result = new IronTesseract().Read(@"images\556cad0b-f931-4e70-b497-789b86d8aea9.png");
+        var result = new IronTesseract().Read(@"C:\Users\kristine.ivanova\RiderProjects\TsiAutomationTesting\TSI.OCR.Auto.Tests\Resource\ru (1).pdf");
         Console.WriteLine(result.Text);
         using (var input = new OcrInput())
         {
             var dir = Directory.GetParent(Directory.GetCurrentDirectory()).Parent?.Parent?.FullName;
-            var path = $@"{dir}\pdfs\Group menu_RU.pdf";
+            var path = $@"{dir}\Resource\pdfs\ru (1).pdf";
             input.AddPdf(path);
             var Result = Ocr.Read(input);
 

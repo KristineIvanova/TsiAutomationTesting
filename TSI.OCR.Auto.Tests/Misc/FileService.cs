@@ -1,4 +1,7 @@
-﻿namespace TSI.OCR.Auto.Tests.Misc {
+﻿using System.IO;
+using System.Linq;
+
+namespace TSI.OCR.Auto.Tests.Misc {
     public class FileService {
         private readonly string sourceFolderPath;
 

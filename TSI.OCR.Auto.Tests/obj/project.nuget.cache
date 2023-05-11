@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tQ2E1AE1nVc2rbrN2Gdey+ZUnkJ/smGyX1e/+Zpr9ovFzpQrsi2cDQZiYvvh/1Azw5D5+n+jbYlzCoshzKnXfg==",
+  "dgSpecHash": "TccuFB7MHQe2MUarx6dCV0tE38Qu5FJsd1i6gC1Alvh89SpHew17rbub7N3ICA+plTnnubTj9TfWwmbeItSbRw==",
   "success": true,
   "projectFilePath": "C:\\Users\\kristine.ivanova\\RiderProjects\\TsiAutomationTesting\\TSI.OCR.Auto.Tests\\TSI.OCR.Auto.Tests.csproj",
   "expectedPackageFiles": [
@@ -46,7 +46,7 @@
     "C:\\Users\\kristine.ivanova\\.nuget\\packages\\serilog\\2.12.0\\serilog.2.12.0.nupkg.sha512",
     "C:\\Users\\kristine.ivanova\\.nuget\\packages\\serilog.sinks.console\\4.1.0\\serilog.sinks.console.4.1.0.nupkg.sha512",
     "C:\\Users\\kristine.ivanova\\.nuget\\packages\\serilog.sinks.xunit\\3.0.5\\serilog.sinks.xunit.3.0.5.nupkg.sha512",
-    "C:\\Users\\kristine.ivanova\\.nuget\\packages\\sixlabors.imagesharp\\3.0.0\\sixlabors.imagesharp.3.0.0.nupkg.sha512",
+    "C:\\Users\\kristine.ivanova\\.nuget\\packages\\sixlabors.imagesharp\\3.0.1\\sixlabors.imagesharp.3.0.1.nupkg.sha512",
     "C:\\Users\\kristine.ivanova\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\kristine.ivanova\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\kristine.ivanova\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

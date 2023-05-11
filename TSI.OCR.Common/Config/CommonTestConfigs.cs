@@ -5,7 +5,7 @@ namespace TSI.OCR.Common.Config {
         private static string solutionPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName;
         private static string pathToNewApkgFiles = Path.GetTempPath();
 
-        public static string pathToRootDirectoryWithFiles = Path.Combine(solutionPath, "TSI.OCR.Common", "Resource");
+        public static string pathToRootDirectoryWithFiles = Path.Combine(solutionPath, "TSI.OCR.Auto.Tests", "Resource");
 
 
         public static string errorImagePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "SourceFile", "Crop Exception.png");
@@ -35,12 +35,16 @@ namespace TSI.OCR.Common.Config {
             ApkgDebugFolder = configuration.GetSection("APKG_DEBUG_FOLDER").Value;
             ColorMistakeBegin = configuration.GetSection("COLOR_MISTAKE_BEGIN").Value;
             ColorMistakeEnd = configuration.GetSection("COLOR_MISTAKE_END").Value;
-            CoordinatesRange = int.Parse(configuration.GetSection("COORDINATES_RANGE").Value);
-            ApiPostFile = configuration.GetSection("API_POST_FILE").Value;
-            ApiGetFile = configuration.GetSection("API_GET_FILE").Value;
-            MongoDbRestoreExe = configuration.GetSection("MONGO_DB_RESTORE_EXE").Value;     
-            AlphaAutoMongoDbAddress = configuration.GetSection("ALPHA_AUTO_MONGO_DB_ADDRESS").Value;
-            MongoDumpFile = configuration.GetSection("MONGO_DUMP_FILE").Value;
+            var value = configuration.GetSection("COORDINATES_RANGE").Value;
+            if (value != null)
+            {
+                CoordinatesRange = int.Parse(value);
+                ApiPostFile = configuration.GetSection("API_POST_FILE").Value;
+                ApiGetFile = configuration.GetSection("API_GET_FILE").Value;
+                MongoDbRestoreExe = configuration.GetSection("MONGO_DB_RESTORE_EXE").Value;
+                AlphaAutoMongoDbAddress = configuration.GetSection("ALPHA_AUTO_MONGO_DB_ADDRESS").Value;
+                MongoDumpFile = configuration.GetSection("MONGO_DUMP_FILE").Value;
+            }
         }
     }
 }

@@ -943,7 +943,7 @@
           }
         }
       },
-      "SixLabors.ImageSharp/3.0.0": {
+      "SixLabors.ImageSharp/3.0.1": {
         "type": "package",
         "compile": {
           "lib/net6.0/SixLabors.ImageSharp.dll": {
@@ -2138,18 +2138,6 @@
           "build/xunit.runner.console.props": {}
         }
       },
-      "xunit.runner.visualstudio/2.4.5": {
-        "type": "package",
-        "compile": {
-          "lib/netcoreapp3.1/_._": {}
-        },
-        "runtime": {
-          "lib/netcoreapp3.1/_._": {}
-        },
-        "build": {
-          "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
-        }
-      },
       "TSI.OCR.Auto.Tests/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
@@ -2163,6 +2151,7 @@
           "Serilog": "2.12.0",
           "Serilog.Sinks.Console": "4.1.0",
           "Serilog.Sinks.XUnit": "3.0.5",
+          "SixLabors.ImageSharp": "3.0.1",
           "TSI.OCR.Common": "1.0.0",
           "xunit": "2.4.2",
           "xunit.analyzers": "1.1.0"
@@ -2187,6 +2176,7 @@
           "Serilog": "2.12.0",
           "Serilog.Sinks.Console": "4.1.0",
           "Serilog.Sinks.XUnit": "3.0.5",
+          "SixLabors.ImageSharp": "3.0.1",
           "xunit": "2.4.2",
           "xunit.analyzers": "1.1.0"
         },
@@ -3251,10 +3241,10 @@
         "serilog.sinks.xunit.nuspec"
       ]
     },
-    "SixLabors.ImageSharp/3.0.0": {
-      "sha512": "ETEHRfUAn/rExqdmj2GDayPkW9zr3BruO9S4WF9ULpWmdydewIjoJqinbQc+o4DsM3X0wGZPyJLlj6N3uxV/aw==",
+    "SixLabors.ImageSharp/3.0.1": {
+      "sha512": "o0v/J6SJwp3RFrzR29beGx0cK7xcMRgOyIuw8ZNLQyNnBhiyL/vIQKn7cfycthcWUPG3XezUjFwBWzkcUUDFbg==",
       "type": "package",
-      "path": "sixlabors.imagesharp/3.0.0",
+      "path": "sixlabors.imagesharp/3.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3263,7 +3253,7 @@
         "lib/net6.0/SixLabors.ImageSharp.dll",
         "lib/net6.0/SixLabors.ImageSharp.xml",
         "sixlabors.imagesharp.128.png",
-        "sixlabors.imagesharp.3.0.0.nupkg.sha512",
+        "sixlabors.imagesharp.3.0.1.nupkg.sha512",
         "sixlabors.imagesharp.nuspec"
       ]
     },
@@ -6527,40 +6517,6 @@
         "xunit.runner.console.nuspec"
       ]
     },
-    "xunit.runner.visualstudio/2.4.5": {
-      "sha512": "OwHamvBdUKgqsXfBzWiCW/O98BTx81UKzx2bieIOQI7CZFE5NEQZGi8PBQGIKawDW96xeRffiNf20SjfC0x9hw==",
-      "type": "package",
-      "path": "xunit.runner.visualstudio/2.4.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "License.txt",
-        "build/net462/xunit.abstractions.dll",
-        "build/net462/xunit.runner.reporters.net452.dll",
-        "build/net462/xunit.runner.utility.net452.dll",
-        "build/net462/xunit.runner.visualstudio.props",
-        "build/net462/xunit.runner.visualstudio.testadapter.dll",
-        "build/netcoreapp3.1/xunit.abstractions.dll",
-        "build/netcoreapp3.1/xunit.runner.reporters.netcoreapp10.dll",
-        "build/netcoreapp3.1/xunit.runner.utility.netcoreapp10.dll",
-        "build/netcoreapp3.1/xunit.runner.visualstudio.dotnetcore.testadapter.dll",
-        "build/netcoreapp3.1/xunit.runner.visualstudio.props",
-        "build/uap10.0.16299/xunit.runner.reporters.netstandard15.dll",
-        "build/uap10.0.16299/xunit.runner.utility.netstandard15.dll",
-        "build/uap10.0.16299/xunit.runner.utility.uwp10.dll",
-        "build/uap10.0.16299/xunit.runner.utility.uwp10.pri",
-        "build/uap10.0.16299/xunit.runner.visualstudio.props",
-        "build/uap10.0.16299/xunit.runner.visualstudio.targets",
-        "build/uap10.0.16299/xunit.runner.visualstudio.uwp.testadapter.dll",
-        "build/uap10.0.16299/xunit.runner.visualstudio.uwp.testadapter.pri",
-        "lib/net462/_._",
-        "lib/netcoreapp3.1/_._",
-        "lib/uap10.0.16299/_._",
-        "logo-512-transparent.png",
-        "xunit.runner.visualstudio.2.4.5.nupkg.sha512",
-        "xunit.runner.visualstudio.nuspec"
-      ]
-    },
     "TSI.OCR.Auto.Tests/1.0.0": {
       "type": "project",
       "path": "../TSI.OCR.Auto.Tests/TSI.OCR.Auto.Tests.csproj",
@@ -6583,12 +6539,11 @@
       "Serilog >= 2.12.0",
       "Serilog.Sinks.Console >= 4.1.0",
       "Serilog.Sinks.XUnit >= 3.0.5",
+      "SixLabors.ImageSharp >= 3.0.1",
       "TSI.OCR.Auto.Tests >= 1.0.0",
-      "TSI.OCR.Common >= 1.0.0",
       "xunit >= 2.4.2",
       "xunit.analyzers >= 1.1.0",
-      "xunit.runner.console >= 2.4.2",
-      "xunit.runner.visualstudio >= 2.4.5"
+      "xunit.runner.console >= 2.4.2"
     ]
   },
   "packageFolders": {
@@ -6620,9 +6575,6 @@
           "projectReferences": {
             "C:\\Users\\kristine.ivanova\\RiderProjects\\TsiAutomationTesting\\TSI.OCR.Auto.Tests\\TSI.OCR.Auto.Tests.csproj": {
               "projectPath": "C:\\Users\\kristine.ivanova\\RiderProjects\\TsiAutomationTesting\\TSI.OCR.Auto.Tests\\TSI.OCR.Auto.Tests.csproj"
-            },
-            "C:\\Users\\kristine.ivanova\\RiderProjects\\TsiAutomationTesting\\TSI.OCR.Common\\TSI.OCR.Common.csproj": {
-              "projectPath": "C:\\Users\\kristine.ivanova\\RiderProjects\\TsiAutomationTesting\\TSI.OCR.Common\\TSI.OCR.Common.csproj"
             }
           }
         }
@@ -6673,6 +6625,10 @@
             "target": "Package",
             "version": "[3.0.5, )"
           },
+          "SixLabors.ImageSharp": {
+            "target": "Package",
+            "version": "[3.0.1, )"
+          },
           "xunit": {
             "target": "Package",
             "version": "[2.4.2, )"
@@ -6682,16 +6638,8 @@
             "version": "[1.1.0, )"
           },
           "xunit.runner.console": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "suppressParent": "All",
             "target": "Package",
             "version": "[2.4.2, )"
-          },
-          "xunit.runner.visualstudio": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[2.4.5, )"
           }
         },
         "imports": [

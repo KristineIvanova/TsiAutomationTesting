@@ -80,6 +80,10 @@
               "target": "Package",
               "version": "[3.0.5, )"
             },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.4.2, )"
@@ -193,6 +197,10 @@
               "target": "Package",
               "version": "[3.0.5, )"
             },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.4.2, )"
@@ -200,18 +208,6 @@
             "xunit.analyzers": {
               "target": "Package",
               "version": "[1.1.0, )"
-            },
-            "xunit.runner.console": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.4.2, )"
-            },
-            "xunit.runner.visualstudio": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.4.5, )"
             }
           },
           "imports": [
@@ -260,9 +256,6 @@
             "projectReferences": {
               "C:\\Users\\kristine.ivanova\\RiderProjects\\TsiAutomationTesting\\TSI.OCR.Auto.Tests\\TSI.OCR.Auto.Tests.csproj": {
                 "projectPath": "C:\\Users\\kristine.ivanova\\RiderProjects\\TsiAutomationTesting\\TSI.OCR.Auto.Tests\\TSI.OCR.Auto.Tests.csproj"
-              },
-              "C:\\Users\\kristine.ivanova\\RiderProjects\\TsiAutomationTesting\\TSI.OCR.Common\\TSI.OCR.Common.csproj": {
-                "projectPath": "C:\\Users\\kristine.ivanova\\RiderProjects\\TsiAutomationTesting\\TSI.OCR.Common\\TSI.OCR.Common.csproj"
               }
             }
           }
@@ -313,6 +306,10 @@
               "target": "Package",
               "version": "[3.0.5, )"
             },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.4.2, )"
@@ -322,16 +319,8 @@
               "version": "[1.1.0, )"
             },
             "xunit.runner.console": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
               "version": "[2.4.2, )"
-            },
-            "xunit.runner.visualstudio": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.4.5, )"
             }
           },
           "imports": [

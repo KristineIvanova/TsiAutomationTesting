@@ -1,11 +1,12 @@
+using System.Threading.Tasks;
 using CommandLine;
 using Serilog;
-using TSI.OCR.Tool.Utility.Commands;
-using TSI.OCR.Tool.Utility.Misc;
+using TSI.OCR.Main.Commands;
+using TSI.OCR.Main.Misc;
 
-namespace TSI.OCR.Tool.Utility {
-    class Program {
-        static async Task Main(string[] args) {
+namespace TSI.OCR.Main {
+    public class Program {
+        public static async Task Main(string[] args) {
             var config = new LoggerConfiguration()
                 .WriteTo.Console();
 

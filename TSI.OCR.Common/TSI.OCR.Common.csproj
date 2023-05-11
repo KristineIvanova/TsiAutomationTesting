@@ -1,11 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <OutputType>Library</OutputType>
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
-        <GenerateProgramFile>true</GenerateProgramFile>
-        <Nullable>enable</Nullable>
+        <Nullable>disable</Nullable>
+        <LangVersion>11</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -18,16 +17,9 @@
       <PackageReference Include="Serilog" Version="2.12.0" />
       <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
       <PackageReference Include="Serilog.Sinks.XUnit" Version="3.0.5" />
+      <PackageReference Include="SixLabors.ImageSharp" Version="3.0.1" />
       <PackageReference Include="xunit" Version="2.4.2" />
       <PackageReference Include="xunit.analyzers" Version="1.1.0" />
-      <PackageReference Include="xunit.runner.console" Version="2.4.2">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
-      <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
     </ItemGroup>
 
 </Project>

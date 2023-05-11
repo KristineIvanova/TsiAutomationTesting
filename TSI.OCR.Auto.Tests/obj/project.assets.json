@@ -943,7 +943,7 @@
           }
         }
       },
-      "SixLabors.ImageSharp/3.0.0": {
+      "SixLabors.ImageSharp/3.0.1": {
         "type": "package",
         "compile": {
           "lib/net6.0/SixLabors.ImageSharp.dll": {
@@ -2163,6 +2163,7 @@
           "Serilog": "2.12.0",
           "Serilog.Sinks.Console": "4.1.0",
           "Serilog.Sinks.XUnit": "3.0.5",
+          "SixLabors.ImageSharp": "3.0.1",
           "xunit": "2.4.2",
           "xunit.analyzers": "1.1.0"
         },
@@ -3227,10 +3228,10 @@
         "serilog.sinks.xunit.nuspec"
       ]
     },
-    "SixLabors.ImageSharp/3.0.0": {
-      "sha512": "ETEHRfUAn/rExqdmj2GDayPkW9zr3BruO9S4WF9ULpWmdydewIjoJqinbQc+o4DsM3X0wGZPyJLlj6N3uxV/aw==",
+    "SixLabors.ImageSharp/3.0.1": {
+      "sha512": "o0v/J6SJwp3RFrzR29beGx0cK7xcMRgOyIuw8ZNLQyNnBhiyL/vIQKn7cfycthcWUPG3XezUjFwBWzkcUUDFbg==",
       "type": "package",
-      "path": "sixlabors.imagesharp/3.0.0",
+      "path": "sixlabors.imagesharp/3.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3239,7 +3240,7 @@
         "lib/net6.0/SixLabors.ImageSharp.dll",
         "lib/net6.0/SixLabors.ImageSharp.xml",
         "sixlabors.imagesharp.128.png",
-        "sixlabors.imagesharp.3.0.0.nupkg.sha512",
+        "sixlabors.imagesharp.3.0.1.nupkg.sha512",
         "sixlabors.imagesharp.nuspec"
       ]
     },
@@ -6554,6 +6555,7 @@
       "Serilog >= 2.12.0",
       "Serilog.Sinks.Console >= 4.1.0",
       "Serilog.Sinks.XUnit >= 3.0.5",
+      "SixLabors.ImageSharp >= 3.0.1",
       "TSI.OCR.Common >= 1.0.0",
       "xunit >= 2.4.2",
       "xunit.analyzers >= 1.1.0",
@@ -6639,6 +6641,10 @@
           "Serilog.Sinks.XUnit": {
             "target": "Package",
             "version": "[3.0.5, )"
+          },
+          "SixLabors.ImageSharp": {
+            "target": "Package",
+            "version": "[3.0.1, )"
           },
           "xunit": {
             "target": "Package",

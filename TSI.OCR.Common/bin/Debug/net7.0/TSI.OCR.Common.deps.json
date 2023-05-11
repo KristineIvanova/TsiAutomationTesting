@@ -17,10 +17,9 @@
           "Serilog": "2.12.0",
           "Serilog.Sinks.Console": "4.1.0",
           "Serilog.Sinks.XUnit": "3.0.5",
+          "SixLabors.ImageSharp": "3.0.1",
           "xunit": "2.4.2",
-          "xunit.analyzers": "1.1.0",
-          "xunit.runner.console": "2.4.2",
-          "xunit.runner.visualstudio": "2.4.5"
+          "xunit.analyzers": "1.1.0"
         },
         "runtime": {
           "TSI.OCR.Common.dll": {}
@@ -198,7 +197,7 @@
       "IronSoftware.System.Drawing/2023.4.4": {
         "dependencies": {
           "BitMiracle.LibTiff.NET": "2.4.649",
-          "SixLabors.ImageSharp": "3.0.0",
+          "SixLabors.ImageSharp": "3.0.1",
           "System.Memory": "4.5.5"
         },
         "runtime": {
@@ -709,11 +708,11 @@
           }
         }
       },
-      "SixLabors.ImageSharp/3.0.0": {
+      "SixLabors.ImageSharp/3.0.1": {
         "runtime": {
           "lib/net6.0/SixLabors.ImageSharp.dll": {
             "assemblyVersion": "3.0.0.0",
-            "fileVersion": "3.0.0.0"
+            "fileVersion": "3.0.1.0"
           }
         }
       },
@@ -1363,9 +1362,7 @@
             "fileVersion": "2.4.2.0"
           }
         }
-      },
-      "xunit.runner.console/2.4.2": {},
-      "xunit.runner.visualstudio/2.4.5": {}
+      }
     }
   },
   "libraries": {
@@ -1668,12 +1665,12 @@
       "path": "serilog.sinks.xunit/3.0.5",
       "hashPath": "serilog.sinks.xunit.3.0.5.nupkg.sha512"
     },
-    "SixLabors.ImageSharp/3.0.0": {
+    "SixLabors.ImageSharp/3.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ETEHRfUAn/rExqdmj2GDayPkW9zr3BruO9S4WF9ULpWmdydewIjoJqinbQc+o4DsM3X0wGZPyJLlj6N3uxV/aw==",
-      "path": "sixlabors.imagesharp/3.0.0",
-      "hashPath": "sixlabors.imagesharp.3.0.0.nupkg.sha512"
+      "sha512": "sha512-o0v/J6SJwp3RFrzR29beGx0cK7xcMRgOyIuw8ZNLQyNnBhiyL/vIQKn7cfycthcWUPG3XezUjFwBWzkcUUDFbg==",
+      "path": "sixlabors.imagesharp/3.0.1",
+      "hashPath": "sixlabors.imagesharp.3.0.1.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",
@@ -2122,20 +2119,6 @@
       "sha512": "sha512-CZmgcKkwpyo8FlupZdWpJCryrAOWLh1FBPG6gmVZuPQkGQsim/oL4PcP4nfrC2hHgXUFtluvaJ0Sp9PQKUMNpg==",
       "path": "xunit.extensibility.execution/2.4.2",
       "hashPath": "xunit.extensibility.execution.2.4.2.nupkg.sha512"
-    },
-    "xunit.runner.console/2.4.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-aiT5umBAiGm6r8y9wAkqeGtojtMpMi+qeTUq6eg53x5utBgX+c49in/Oq+ZDg57gAfbMlYoNChOv2LbC7K9Q4g==",
-      "path": "xunit.runner.console/2.4.2",
-      "hashPath": "xunit.runner.console.2.4.2.nupkg.sha512"
-    },
-    "xunit.runner.visualstudio/2.4.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-OwHamvBdUKgqsXfBzWiCW/O98BTx81UKzx2bieIOQI7CZFE5NEQZGi8PBQGIKawDW96xeRffiNf20SjfC0x9hw==",
-      "path": "xunit.runner.visualstudio/2.4.5",
-      "hashPath": "xunit.runner.visualstudio.2.4.5.nupkg.sha512"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "n6qGvzlO3qHQC+iYnI9FQUCi3UKmok7Q2cbD9qF1UK6f0nESH0+rHHD2r8c7VKVuKXhfqdhgzouU5MulvRCfLA==",
+  "dgSpecHash": "IMdBbwCHV8fPB9cgPVY6ZLGGEXW2D+wjtrm6URc20zZfhfzAppsIhv2TpFVqzn/upM1AW9Oo9gZn1SxhrI8Zpw==",
   "success": true,
   "projectFilePath": "C:\\Users\\kristine.ivanova\\RiderProjects\\TsiAutomationTesting\\TSI.OCR.Common\\TSI.OCR.Common.csproj",
   "expectedPackageFiles": [
@@ -46,7 +46,7 @@
     "C:\\Users\\kristine.ivanova\\.nuget\\packages\\serilog\\2.12.0\\serilog.2.12.0.nupkg.sha512",
     "C:\\Users\\kristine.ivanova\\.nuget\\packages\\serilog.sinks.console\\4.1.0\\serilog.sinks.console.4.1.0.nupkg.sha512",
     "C:\\Users\\kristine.ivanova\\.nuget\\packages\\serilog.sinks.xunit\\3.0.5\\serilog.sinks.xunit.3.0.5.nupkg.sha512",
-    "C:\\Users\\kristine.ivanova\\.nuget\\packages\\sixlabors.imagesharp\\3.0.0\\sixlabors.imagesharp.3.0.0.nupkg.sha512",
+    "C:\\Users\\kristine.ivanova\\.nuget\\packages\\sixlabors.imagesharp\\3.0.1\\sixlabors.imagesharp.3.0.1.nupkg.sha512",
     "C:\\Users\\kristine.ivanova\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\kristine.ivanova\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\kristine.ivanova\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
@@ -110,9 +110,7 @@
     "C:\\Users\\kristine.ivanova\\.nuget\\packages\\xunit.assert\\2.4.2\\xunit.assert.2.4.2.nupkg.sha512",
     "C:\\Users\\kristine.ivanova\\.nuget\\packages\\xunit.core\\2.4.2\\xunit.core.2.4.2.nupkg.sha512",
     "C:\\Users\\kristine.ivanova\\.nuget\\packages\\xunit.extensibility.core\\2.4.2\\xunit.extensibility.core.2.4.2.nupkg.sha512",
-    "C:\\Users\\kristine.ivanova\\.nuget\\packages\\xunit.extensibility.execution\\2.4.2\\xunit.extensibility.execution.2.4.2.nupkg.sha512",
-    "C:\\Users\\kristine.ivanova\\.nuget\\packages\\xunit.runner.console\\2.4.2\\xunit.runner.console.2.4.2.nupkg.sha512",
-    "C:\\Users\\kristine.ivanova\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.5\\xunit.runner.visualstudio.2.4.5.nupkg.sha512"
+    "C:\\Users\\kristine.ivanova\\.nuget\\packages\\xunit.extensibility.execution\\2.4.2\\xunit.extensibility.execution.2.4.2.nupkg.sha512"
   ],
   "logs": []
 }

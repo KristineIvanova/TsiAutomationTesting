@@ -1,9 +1,12 @@
-﻿using Serilog;
+﻿using System;
+using System.IO;
+using System.Threading.Tasks;
+using Serilog;
 using TSI.OCR.Auto.Tests;
 using TSI.OCR.Auto.Tests.Misc;
 using TSI.OCR.Common.Config;
 
-namespace TSI.OCR.Tool.Utility.Commands {
+namespace TSI.OCR.Main.Commands {
     public class  ApkgUpdater {
         private readonly ILogger logger;
         private IronOcrSampleTest.TestFilesRepository repo = new();
@@ -18,10 +21,10 @@ namespace TSI.OCR.Tool.Utility.Commands {
             foreach (var dir in dirs) {
                 logger.Information("Updating directory {Dir}", dir);
 
-                //if (dir.IndexOf("RocheD3V_3_090_MethComQuant_S-3", StringComparison.Ordinal) > 2) {
+                if (dir.IndexOf("ru (1)", StringComparison.Ordinal) > 2) {
                     // Uncomment if need run only one document.
                     await ProcessDir(dir);
-                //}
+                }
             }
         }
 
