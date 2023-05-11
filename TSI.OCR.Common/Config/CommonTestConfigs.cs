@@ -27,7 +27,7 @@ namespace TSI.OCR.Common.Config {
             var configFileName = "";
 
             var configuration = new ConfigurationBuilder()
-                //.SetBasePath(Path.Combine(solutionPath, "TSI.OCR.Common", "Config"))
+                .SetBasePath(Path.Combine(solutionPath, "TSI.OCR.Common", "Config"))
                 //.AddJsonFile(configFileName, false, false)
                 .Build();
 
