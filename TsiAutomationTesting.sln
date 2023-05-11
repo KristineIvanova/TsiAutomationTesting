@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSI.OCR.Common", "TSI.OCR.Common\TSI.OCR.Common.csproj", "{BFD44F39-5F24-4BAB-9276-C3B079ED1B34}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSI.OCR.Tool.Utility", "TSI.OCR.Tool.Utility\TSI.OCR.Tool.Utility.csproj", "{FFFC3B5A-2741-483C-83CF-314047E0D78C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSI.OCR.Auto.Tests", "TSI.OCR.Auto.Tests\TSI.OCR.Auto.Tests.csproj", "{35A11994-C154-4E96-B799-6F9E08A7D078}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{BFD44F39-5F24-4BAB-9276-C3B079ED1B34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFD44F39-5F24-4BAB-9276-C3B079ED1B34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFD44F39-5F24-4BAB-9276-C3B079ED1B34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFFC3B5A-2741-483C-83CF-314047E0D78C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFFC3B5A-2741-483C-83CF-314047E0D78C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFFC3B5A-2741-483C-83CF-314047E0D78C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFFC3B5A-2741-483C-83CF-314047E0D78C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35A11994-C154-4E96-B799-6F9E08A7D078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35A11994-C154-4E96-B799-6F9E08A7D078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35A11994-C154-4E96-B799-6F9E08A7D078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35A11994-C154-4E96-B799-6F9E08A7D078}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
