@@ -2,8 +2,7 @@ using System.Collections.Generic;
 
 namespace TSI.OCR.Auto.Tests.Misc;
 
-public static class AnsiColors
-{
+public static class AnsiColors {
     public const string Bold = "\u001b[37;1m";
     public const string Strike = "\u001b[37;9m";
     public const string Cyan = "\u001b[36m";
@@ -12,12 +11,10 @@ public static class AnsiColors
     public const string Yellow = "\u001b[33m";
     public const string Reset = "\u001b[0m";
 
-    public static string Color(string message)
-    {
-        string coloredMessage = message;
+    public static string Color(string message) {
+        var coloredMessage = message;
 
-        var colorDict = new Dictionary<string, string>()
-        {
+        var colorDict = new Dictionary<string, string> {
             { "bold", Bold },
             { "strike", Strike },
             { "cyan", Cyan },
@@ -26,10 +23,9 @@ public static class AnsiColors
             { "yellow", Yellow }
         };
 
-        foreach (var color in colorDict)
-        {
-            string colorTag = $"<{color.Key}>";
-            string colorEndTag = $"</{color.Key}>";
+        foreach (var color in colorDict) {
+            var colorTag = $"<{color.Key}>";
+            var colorEndTag = $"</{color.Key}>";
 
             coloredMessage = coloredMessage
                 .Replace(colorTag, color.Value)
