@@ -5,7 +5,7 @@ namespace TSI.OCR.Common.Config {
         private static string solutionPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName;
         private static string pathToNewApkgFiles = Path.GetTempPath();
 
-        public static string pathToRootDirectoryWithFiles = Path.Combine(solutionPath, "TSI.OCR.Auto.Tests", "Resource");
+        public static string pathToRootDirectoryWithFiles = Path.Combine(solutionPath, "TSI.OCR.Auto.Tests", "Resource", "Documents");
 
 
         public static string errorImagePath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName, "SourceFile", "Crop Exception.png");

@@ -22,6 +22,13 @@ namespace TSI.OCR.Auto.Tests.Misc {
                 .GetFiles(sourceFolderPath, "*.*", SearchOption.AllDirectories).FirstOrDefault(s => s.EndsWith(".pdf") || s.EndsWith(".html"));
         }
         
+        public string[] GetSourceFilesPaths() {
+            //return Directory.GetFiles(sourceFolderPath, "*.pdf").FirstOrDefault();
+            return Directory
+                .GetFiles(sourceFolderPath, "*.*", SearchOption.AllDirectories)
+                .Where(s => s.EndsWith(".pdf") || s.EndsWith(".html")).ToArray();
+        }
+        
         public string GetFeatureFlagsFilePath() {
             return Directory.GetFiles(sourceFolderPath, "*.txt").FirstOrDefault();
         }

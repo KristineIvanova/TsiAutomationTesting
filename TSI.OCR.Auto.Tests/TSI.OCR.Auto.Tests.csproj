@@ -11,6 +11,7 @@
         <PackageReference Include="CommandLineParser" Version="2.9.1" />
         <PackageReference Include="FluentAssertions" Version="6.11.0" />
         <PackageReference Include="IronOcr" Version="2023.5.35" />
+        <PackageReference Include="IronOcr.MacOs.ARM" Version="2023.5.35" />
         <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
         <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="7.0.0" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
@@ -40,6 +41,9 @@
 
     <ItemGroup>
         <None Remove="OCR\**" />
+        <None Update="Resource\identifier.db">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
     <ItemGroup>
@@ -48,6 +52,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\TSI.OCR.Common\TSI.OCR.Common.csproj" />
+        <ProjectReference Include="..\TSI.OCR.Data\TSI.OCR.Data.csproj" />
     </ItemGroup>
 
 </Project>

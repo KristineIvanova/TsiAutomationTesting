@@ -15,7 +15,7 @@ namespace TSI.OCR.Main {
             await Parser.Default.ParseArguments<Options>(args)
                 .WithParsedAsync(async o => {
                     if (o.Update) {
-                        var up = new ApkgUpdater(logger);
+                        var up = new ReferenceDatabaseUpdater(logger);
                         await up.Update();
                     }
                 });
