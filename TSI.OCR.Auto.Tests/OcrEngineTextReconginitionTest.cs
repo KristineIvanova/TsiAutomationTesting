@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using IronOcr;
+using TSI.OCR.Auto.Tests.Misc;
 using TSI.OCR.Common.Config;
 using Xunit;
+using static IronOcr.Installation;
 
 namespace TSI.OCR.Auto.Tests;
 
@@ -16,7 +18,7 @@ public class IronOcrSampleTest
     [Obsolete("Obsolete")]
     public IronOcrSampleTest()
     {
-        Installation.LicenseKey =
+        LicenseKey =
             "IRONOCR.KRISTINEIVANOVA.6207-3AC6322919-IXBPPJWY2AWMR-K5ACUCUZBZC5-RU4X2Y2U7QYT-6CS7HC4K56FP-RO32SOBCKJV5-KTWREB-THNFP5SEDSWJUA-DEPLOYMENT.TRIAL-5OMJXI.TRIAL.EXPIRES.07.JUN.2023";
     }
 
@@ -35,6 +37,9 @@ public class IronOcrSampleTest
 
         input.AddImage(path);
         var result = ocr.Read(input);
+        
+        Console.Error.WriteLine(AnsiColors.Color($"<red>{result}</red>"));
+
 
         Assert.True(result.Confidence > 80, "The result needs to be of high confidence.");
         Assert.True(result.Text == imgText, $"The text needs to say '{imgText}'.");
