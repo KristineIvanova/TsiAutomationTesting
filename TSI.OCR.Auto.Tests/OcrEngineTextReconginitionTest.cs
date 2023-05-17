@@ -14,19 +14,13 @@ using static IronOcr.Installation;
 
 namespace TSI.OCR.Auto.Tests;
 
-public class IronOcrSampleTest
-{
-    private readonly IronTesseract ocr;
+public class IronOcrSampleTest {
     private readonly string rootPath;
-    public const string File1 = "ru (1).pdf";
-    public const string File2 = "ru (1).pdf";
-
-    [Obsolete("Obsolete")]
+    
     public IronOcrSampleTest()
     {
         LicenseKey =
             "IRONOCR.KRISTINEIVANOVA.6207-3AC6322919-IXBPPJWY2AWMR-K5ACUCUZBZC5-RU4X2Y2U7QYT-6CS7HC4K56FP-RO32SOBCKJV5-KTWREB-THNFP5SEDSWJUA-DEPLOYMENT.TRIAL-5OMJXI.TRIAL.EXPIRES.07.JUN.2023";
-        ocr = new IronTesseract();
         rootPath = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent?.Parent?.FullName, "Resource");
     }
 
