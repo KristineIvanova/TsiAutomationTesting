@@ -60,6 +60,10 @@ public class IronOcrSampleTest
                         $"There are {differentFields.Count} fields that have different values in both documents.";
         
         Console.Error.WriteLine(AnsiColors.Color($"<red>{result}</red>"));
+        
+        Assert.True(srcFields.Count == 0, result);
+        Assert.True(targetFields.Count == 0, result);
+        Assert.True(differentFields.Count == 0, result);
     }
 
     // [Fact]
