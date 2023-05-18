@@ -5,10 +5,11 @@ using TSI.OCR.Data;
 namespace TSI.OCR.Auto.Tests.Misc; 
 
 public class PdfFileProcessor {
-    private readonly ILogger logger;
+    private readonly ILogger _logger;
 
-    public PdfFileProcessor(ILogger logger) {
-        this.logger = logger;
+    public PdfFileProcessor(ILogger logger)
+    {
+        _logger = logger;
     }
 
     public async Task ProcessFile(string sourceFilePath) {

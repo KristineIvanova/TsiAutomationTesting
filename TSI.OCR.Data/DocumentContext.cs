@@ -4,10 +4,10 @@ using TSI.OCR.Data.Entities;
 namespace TSI.OCR.Data;
 
 public class DocumentContext: DbContext {
-    private readonly string filePath;
+    private readonly string _filePath;
 
     public DocumentContext(string filePath = "identifier.db") {
-        this.filePath = filePath;
+        _filePath = filePath;
     }
     
     public DbSet<Document> Documents { get; set; } = default!;
@@ -15,7 +15,7 @@ public class DocumentContext: DbContext {
     public DbSet<Field> Fields { get; set; } = default!;
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
-        optionsBuilder.UseSqlite($"Data Source={filePath}");
+        optionsBuilder.UseSqlite($"Data Source={_filePath}");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder) {

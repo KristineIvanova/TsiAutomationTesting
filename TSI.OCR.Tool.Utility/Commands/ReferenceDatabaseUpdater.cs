@@ -6,20 +6,20 @@ using TSI.OCR.Data;
 
 namespace TSI.OCR.Main.Commands {
     public class  ReferenceDatabaseUpdater {
-        private readonly ILogger logger;
+        private readonly ILogger _logger;
 
         public ReferenceDatabaseUpdater(ILogger logger) {
-            this.logger = logger;
+            _logger = logger;
         }
 
         public async Task Update() {
-            logger.Information("Updating reference database...");
+            _logger.Information("Updating reference database...");
             var dir = IronOcrSampleTest.TestFilesRepository.GetDocumentsDir();
             await ProcessDir(dir);
         }
 
         private async Task ProcessDir(string directory) {
-            var processor = new PdfFileProcessor(logger);
+            var processor = new PdfFileProcessor(_logger);
 
             var fileService = new FileService(directory);
             var files = fileService.GetSourceFilesPaths();
