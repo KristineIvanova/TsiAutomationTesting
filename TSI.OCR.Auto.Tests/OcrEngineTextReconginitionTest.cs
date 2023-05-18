@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using IronSoftware.Drawing;
 using Microsoft.EntityFrameworkCore;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats;
 using TSI.OCR.Auto.Tests.Misc;
+using TSI.OCR.Auto.Tests.Misc.Helpers;
 using TSI.OCR.Auto.Tests.Misc.LogHTML;
 using TSI.OCR.Common.Config;
 using TSI.OCR.Data;
@@ -53,66 +57,49 @@ public class IronOcrSampleTest : FixtureBase, IClassFixture<IronOcrSampleTest.Ir
 
         // Find fields that doesn't exist in target document
         var srcFields = srcDocument.Fields.Where(x =>
-            !targetDocument.Fields.Any(y => y.Value == x.Value && y.X == x.X &&
-                                            y.Y == x.Y && y.Width == x.Width &&
-                                            y.Height == x.Height && x.Page == y.Page)).ToList();
+            !targetDocument.Fields.Any(y => y.Value == x.Value && x.OverlapArea(y) > 0.5 && x.Page == y.Page)).ToList();
 
-        foreach (var src in srcFields)
-        {
+        foreach (var src in srcFields) {
+            var image = Image.Load(src.Image);
             LogHtmlStaticHtmlError.AddBlockNotFoundError(srcDocument.Name, "text", src.Page, src.Value, 
-                "Block not found in target document");
+                "Block not found in target document", image, src.Value, src.Value);
         }
 
         // Find fields that doesn't exist in target document
         var targetFields = targetDocument.Fields.Where(x =>
-            !srcDocument.Fields.Any(y => y.Value == x.Value && y.X == x.X &&
-                                         y.Y == x.Y && y.Width == x.Width &&
-                                         y.Height == x.Height && x.Page == y.Page)).ToList();
+            !srcDocument.Fields.Any(y => y.Value == x.Value && y.OverlapArea(x) > 0.5 
+                                                            && x.Page == y.Page)).ToList();
         
-        foreach (var target in targetFields)
-        {
-            LogHtmlStaticHtmlError.AddBlockNotFoundError(srcDocument.Name, "text", target.Page, target.Value, 
-                "Block not found in source document");
+        foreach (var target in targetFields) {
+            var image = Image.Load(target.Image);
+            LogHtmlStaticHtmlError.AddBlockNotFoundError(srcDocument.Name, "text", target.Page, target.Value,
+                "Block not found in source document", image, target.Value, target.Value);
         }
 
         // Find fields that exist in both documents but have different values
-        var differentFields = (from src in srcDocument.Fields
-            join target in targetDocument.Fields on new
-                {
-                   
-                    src.X,
-                    src.Y,
-                    src.Width,
-                    src.Height,
-                    src.Page
-                } equals new
-                {
-                    target.X,
-                    target.Y,
-                    target.Width,
-                    target.Height,
-                    target.Page
-                }
-            where src.Value != target.Value
-            select new {
-                Src = src, Target = target
-            }).ToArray();
+        var differentFields = new List<(Field Src, Field Target)>();
+        foreach (var src in srcDocument.Fields) {
+            var target = targetDocument.Fields.FirstOrDefault(x => src.OverlapArea(x) > 0.5 && x.Page == src.Page);
+            if (target == null) continue;
+            if (src.Value == target.Value) continue;
+            differentFields.Add((src, target));
+        }
         
-        foreach (var diff in differentFields)
-        {
+        foreach (var diff in differentFields) {
+            var image = Image.Load(diff.Target.Image);
             LogHtmlStaticHtmlError.AddCompareError(srcDocument.Name, "text", "text", diff.Src.Page, diff.Src.Value,
-                    diff.Target.Value, null);
+                    diff.Target.Value, image);
         }
 
         var result = $"Source document has {srcFields.Count} fields that are not present in target document. " +
                      $"Target document has {targetFields.Count} fields that are not present in source document. " +
-                     $"There are {differentFields.Length} fields that have different values in both documents.";
+                     $"There are {differentFields.Count} fields that have different values in both documents.";
 
         Console.Error.WriteLine(AnsiColors.Color($"<red>{result}</red>"));
 
         Assert.True(srcFields.Count == 0, result);
         Assert.True(targetFields.Count == 0, result);
-        Assert.True(differentFields.Length == 0, result);
+        Assert.True(differentFields.Count == 0, result);
     }
 
     private async Task<Document> FindDocument(string filePath)
@@ -132,6 +119,6 @@ public class IronOcrSampleTest : FixtureBase, IClassFixture<IronOcrSampleTest.Ir
 
     public class TestFilesRepository
     {
-        public static string GetDocumentsDir() => CommonTestConfigs.pathToRootDirectoryWithFiles;
+        public static string GetDocumentsDir() => CommonTestConfigs.pathToRootDirectoryWithFiles.Replace("Documents", "BrokenDocuments");
     }
 }

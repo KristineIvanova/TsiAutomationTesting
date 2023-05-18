@@ -28,4 +28,6 @@ public class Field {
     public Document Document { get; set; }
     
     public int Page { get; set; }
+
+    public byte[]? Image { get; set; }
 }

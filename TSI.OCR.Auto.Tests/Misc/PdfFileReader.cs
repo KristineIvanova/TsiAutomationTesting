@@ -25,7 +25,8 @@ public class PdfFileReader
     public async Task<Document> ParseFile()
     {
         Console.WriteLine($"Parsing file {_filePath}...");
-        var ocrResult = await _ocr.ReadAsync(_filePath);
+        var ocrInput = OcrInput.FromPdf(_filePath, 72);
+        var ocrResult = await _ocr.ReadAsync(ocrInput);
         var result = new List<Field>();
 
         foreach (var page in ocrResult.Pages)
@@ -39,7 +40,8 @@ public class PdfFileReader
                     Y = word.Location.Y,
                     Width = word.Location.Width,
                     Height = word.Location.Height,
-                    Page = page.PageNumber
+                    Page = page.PageNumber,
+                    Image = word.ToBitmap(ocrInput).GetBytes()
                 }).ToList();
 
             result.AddRange(fields);
