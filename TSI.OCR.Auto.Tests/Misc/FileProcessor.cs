@@ -12,27 +12,26 @@ using TSI.OCR.Auto.Tests.Misc.JsonConvertObject;
 using TSI.OCR.Common.Config;
 
 namespace TSI.OCR.Auto.Tests.Misc {
-    public class ApkgFileProcessor {
+    public class FileProcessor {
         private readonly ILogger logger;
 
-        public ApkgFileProcessor(ILogger logger) {
+        public FileProcessor(ILogger logger) {
             this.logger = logger;
         }
 
         public async Task<string> ProcessFile(string sourceFilePath, string jsonFilePath) {
             //send POST-request with pdf file
             var response = await UploadFileToServer(sourceFilePath, jsonFilePath);
-
-            //get apkg file
+            
             var targetPackageName = response.Split(new[] {
                 "\""
             }, StringSplitOptions.None)[1].Split("\"")[0];
             logger.Information("Target package name is: {TargetPackageName}", targetPackageName);
 
-            return await WaitApkgFileFromServer(targetPackageName, 30, 2);
+            return await WaitFileFromServer(targetPackageName, 30, 2);
         }
 
-        private async Task<string> WaitApkgFileFromServer(string fileName, int retries, int time) {
+        private async Task<string> WaitFileFromServer(string fileName, int retries, int time) {
             var attempt = 0;
             do {
                 try {
@@ -40,10 +39,10 @@ namespace TSI.OCR.Auto.Tests.Misc {
                     var response = await httpClient.GetAsync(CommonTestConfigs.ApiGetFile + fileName);
 
                     if (response.StatusCode.Equals(HttpStatusCode.OK)) {
-                        var path = Path.Combine(CommonTestConfigs.PathToNewApkgFiles, fileName);
+                        var path = Path.Combine(CommonTestConfigs.PathToNewFiles, fileName);
                         using (var fileStream = new FileStream(path, FileMode.Create,
                                    FileAccess.Write, FileShare.None)) {
-                            logger.Information("Saving file: {PathToNewApkgFiles}", CommonTestConfigs.PathToNewApkgFiles + fileName);
+                            logger.Information("Saving file: {PathToNewFiles}", CommonTestConfigs.PathToNewFiles + fileName);
                             await response.Content.CopyToAsync(fileStream);
                             return path;
                         }

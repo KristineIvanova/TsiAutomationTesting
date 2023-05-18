@@ -9,7 +9,7 @@ namespace TSI.OCR.Auto.Tests.Misc {
         private ILogger Logger { get; }
 
         public ValidateService(ILogger logger) {
-            this.Logger = logger;
+            Logger = logger;
         }
 
         /// <summary>
