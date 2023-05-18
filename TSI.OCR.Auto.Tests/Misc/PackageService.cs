@@ -1,9 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Linq;
-using System.Threading.Tasks;
 using Dapper;
 
 namespace TSI.OCR.Auto.Tests.Misc {
